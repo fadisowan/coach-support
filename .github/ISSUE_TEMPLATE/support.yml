@@ -1,0 +1,50 @@
+name: طلب دعم / Support request
+description: مشكلة أو سؤال عن ثيم كوتش في متجرك على سلة
+labels: ["دعم"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        شكراً لتواصلك. هذا الطلب عام: لا تكتب فيه كلمات مرور أو بيانات عملائك.
+        This request is public: never post passwords or customer data.
+  - type: input
+    id: store
+    attributes:
+      label: رابط المتجر / Store link
+      placeholder: https://…
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: الصفحة أو القسم / Page or section
+      placeholder: مثل «صفحة المنتج» أو «متجر · كل المنتجات بتبويبات»
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: ما المشكلة؟ / What happened?
+      description: ما فعلته، وما توقعت أن يحدث، وما حدث فعلاً.
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: الجهاز / Device
+      options:
+        - جوال / Phone
+        - تابلت / Tablet
+        - حاسوب / Computer
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: إصدار الثيم / Theme version
+      description: من صفحة الثيم في لوحة سلة (اختياري)
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: لقطات شاشة / Screenshots
+      description: اسحب الصور هنا (اختياري)
